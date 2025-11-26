@@ -1,9 +1,8 @@
-from dataclasses import dataclass
 from typing import List
 from app.schema.Professor import ProfessorData
 from app.services.ProfessorService import ProfessorService
 
-@dataclass
+
 class ProfessorRouter(): 
     def __init__(self, service: ProfessorService):
         self.service = service

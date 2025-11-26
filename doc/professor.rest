@@ -30,7 +30,7 @@ Accept: application/json
 }
 
 ####
-DELETE  http://localhost:8000/professor/1
+DELETE  http://localhost:8000/professor/2
 Accept: application/json
 
 

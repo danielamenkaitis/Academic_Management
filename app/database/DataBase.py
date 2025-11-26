@@ -14,3 +14,5 @@ SessionLocal = sessionmaker(bind=engine)
 
 # Base para os modelos ORM
 Base = declarative_base()
+
+

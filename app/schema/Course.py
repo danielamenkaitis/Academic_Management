@@ -9,7 +9,7 @@ class CourseData(BaseModel):
     professor_id: int
     active: str
     
-    class Config: 
-        from_attributes = True
+    class Config:
+        orm_mode = True
     
     
