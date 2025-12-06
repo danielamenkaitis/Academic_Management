@@ -3,23 +3,23 @@ GET http://localhost:8000/professor
 Accept: application/json
 
 ### Colocar ID no final da URL
-GET http://localhost:8000/professor/2
+GET http://localhost:8000/professor/3
 Accept: application/json
 
 
 ### Criar estudante (POST)
-POST http://localhost:8000/professor
+POST http://localhost:8001/professor
 Content-Type: application/json
 Accept: application/json
 
 {
-  "full_name": "José de Almeida",
-  "department": "Marketing",
+  "full_name": "Maria Helena de Assis",
+  "department": "Matemática",
   "active":"S"
 }
 
 ### atualizar estudante (POST)
-PUT http://localhost:8000/professor/3
+PUT http://localhost:8000/professor/2
 Content-Type: application/json
 Accept: application/json
 
@@ -30,7 +30,7 @@ Accept: application/json
 }
 
 ####
-DELETE  http://localhost:8000/professor/2
+DELETE  http://localhost:8000/professor/4
 Accept: application/json
 
 

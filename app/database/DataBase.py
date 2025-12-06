@@ -1,9 +1,10 @@
+from typing import Generator
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import Session, sessionmaker, declarative_base
 import os
 
 # URL de conexão: substitua user, password e dbname
-DATABASE_URL =  os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Cria o engine (motor de conexão)
 engine = create_engine(DATABASE_URL, echo=True)
@@ -15,4 +16,9 @@ SessionLocal = sessionmaker(bind=engine)
 # Base para os modelos ORM
 Base = declarative_base()
 
-
+def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

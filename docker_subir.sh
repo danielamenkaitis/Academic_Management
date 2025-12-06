@@ -1,0 +1,1 @@
+sudo find . -name "._*" -type f -delete && docker-compose up  --build

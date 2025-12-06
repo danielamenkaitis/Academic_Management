@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_am_db
+    environment:
+      POSTGRES_USER: ahfneto
+      POSTGRES_PASSWORD: teste123
+      POSTGRES_DB: academic_management
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+
+  api:
+    build: .
+    container_name: academic_management_app
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://ahfneto:teste123@db:5432/academic_management
+
+    ports:
+      - "8001:8000"

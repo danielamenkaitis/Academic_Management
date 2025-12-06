@@ -1,0 +1,39 @@
+###
+GET http://localhost:8000/assessment
+Accept: application/json
+
+###
+GET http://localhost:8000/assessment/8
+Accept: application/json
+
+###
+POST http://localhost:8000/assessment
+Content-Type: application/json
+Accept: application/json
+
+{
+    "student_id": 1,
+    "course_id": 4,
+    "grade": 9.75,
+    "semester": "2025-1",
+    "evaluation_date": "2025-08-15",
+    "active": "S"
+}
+
+###
+PUT http://localhost:8000/assessment/10
+Content-Type: application/json
+Accept: application/json
+
+{
+    "student_id": 1,
+    "course_id": 4,
+    "grade": 8.5,
+    "semester": "2025-1",
+    "evaluation_date": "2025-08-15",
+    "active": "S"
+}
+
+###
+DELETE http://localhost:8000/assessment/10
+Accept: application/json

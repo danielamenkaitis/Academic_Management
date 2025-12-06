@@ -1,2 +1,36 @@
-GET http://localhost:8000/course
+GET http://localhost:8001/course
+Accept: application/json
+
+###
+GET http://localhost:8001/course/2
+Accept: application/json
+
+###
+POST http://localhost:8001/course
+Content-Type: application/json
+Accept: application/json
+
+{
+  "course_name": "Enfermagem",
+  "course_code": "EN150",
+  "credit_hours": 100,
+  "professor_id": 1,
+  "active": "S"    
+}
+
+###
+PUT http://localhost:8000/course/7
+Content-Type: application/json
+Accept: application/json
+
+{
+  "course_name": "Ciência da Computação",
+  "course_code": "CM300",
+  "credit_hours": 110,
+  "professor_id": 3,
+  "active": "S"    
+}
+
+###
+DELETE http://localhost:8000/course/8
 Accept: application/json

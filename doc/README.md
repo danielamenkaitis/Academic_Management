@@ -16,7 +16,6 @@
 - Script para teste das apis, recurso.rest → é o caderno de instruções, mostrando como pedir os bonecos pela internet.
 
 
-
 ## 🧩 Como cada parte funciona
 -       1. Main.py
     -   Cria o aplicativo FastAPI (app = FastAPI()).
